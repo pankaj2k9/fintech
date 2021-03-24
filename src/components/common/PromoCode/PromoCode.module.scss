@@ -33,6 +33,7 @@
                 border: 1px solid $secondary-color;
             }
         }
+          
 
         .icon { 
             position: absolute;
@@ -45,6 +46,17 @@
             height: auto;
           }
     }
+
+
    
     
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .input{
+        width: 100%!important;
+        margin-bottom: 20px;
+        font-size: 0.730rem!important;
+    }
+  
+  }

@@ -18,5 +18,5 @@ code {
 input, button {
   margin:0px;
   padding: 0px;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }

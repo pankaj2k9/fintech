@@ -20,7 +20,8 @@
         color: $primary-color;
         font-weight: 400;
         font-family: 'Roboto', sans-serif;
-        width: 18.75rem;
+        width: 100%;
+        max-width: 18.75rem;
         height: 3rem;
         margin-right: 0.625rem;
         &:focus{
@@ -40,3 +41,11 @@
         font-family: 'Roboto', sans-serif;
     }
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .input{
+        width: 80%!important;
+        margin-bottom: 20px;
+    }
+  
+  }

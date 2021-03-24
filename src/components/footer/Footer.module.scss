@@ -16,3 +16,10 @@
   font-family: 'Roboto', sans-serif;
  }
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .bg {
+        display:block;
+    }
+  
+  }
