@@ -1,0 +1,22 @@
+@import "../../assets/styles/variables.scss";
+
+.app {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  color: #000133;
+  .drawer {
+    width: 80px;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    flex: 1;
+    background: $bg-main-color;
+    .content {
+        flex: 1;
+    }
+    
+  }
+}

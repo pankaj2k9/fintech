@@ -1,0 +1,28 @@
+@import "../../assets/styles/variables.scss";
+.bg {
+  z-index: 999;
+  background: $bg-sidebar-color;
+  display: flex;
+  flex: 1;
+  height: 100%;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  .logo {
+    width: 25px;
+    height: "auto";
+    margin: 25px;
+  }
+  .icon {
+    margin: 25px;
+    fill: $sub-heading-color;
+    width: 1.1em;
+    height: 1.1em;
+    &:hover {
+        fill: $secondary-color;
+    }
+    &:active {
+        fill: #ffffff;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../assets/styles/variables.scss";
+
+.bg {
+ padding: 15px;
+ border-top: 1px solid #E9E9E9;
+ display:flex;
+ justify-content: flex-end;
+ margin-left: 30px;
+ margin-right: 30px;
+ .txt{
+  font-size: 13px;
+  font-weight: 400;
+  color: $sub-heading-color;
+  line-height: 19px;
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+ }
+}
