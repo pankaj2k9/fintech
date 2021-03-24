@@ -1,17 +1,17 @@
 import React from "react";
 import styles from "./BonusItem.module.scss";
 import PromoCode from "../PromoCode/PromoCode";
-import { Bonus } from '../../../types/index';
+import { Bonus } from "../../../types/index";
 import Button from "../Button/Button";
 interface BonusItemProps {
-  onChangeActivate: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, data: Bonus)=> void;
+  onChangeActivate: (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    data: Bonus
+  ) => void;
   data: Bonus;
 }
 
-const BonusItem: React.FC<BonusItemProps> = ({
-  onChangeActivate,
-  data
-}) => {
+const BonusItem: React.FC<BonusItemProps> = ({ onChangeActivate, data }) => {
   return (
     <div className={styles.container}>
       <div className={styles.titleDescWrap}>
@@ -27,7 +27,10 @@ const BonusItem: React.FC<BonusItemProps> = ({
         />
       </div>
       <div className={styles.btnWarp}>
-        <Button onClick={(e) => onChangeActivate(e, data)} submitText={data.activated ? "Activated" : "Active Bonus"} />
+        <Button
+          onClick={(e) => onChangeActivate(e, data)}
+          submitText={data.activated ? "Activated" : "Active Bonus"}
+        />
       </div>
     </div>
   );

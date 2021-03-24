@@ -13,11 +13,11 @@ const Home = () => {
       </aside>
 
       <main className={styles.main}>
-          <Header />
+        <Header />
         <div className={styles.content}>
-        <Main /> 
+          <Main />
         </div>
-        <Footer/>
+        <Footer />
       </main>
     </div>
   );

@@ -72,8 +72,6 @@ const Main = () => {
     setData(updatedLists);
   };
 
-  
-
   return (
     <div className={styles.bg}>
       <div className={styles.searchBar}>

@@ -1,7 +1,7 @@
-import Home from './containers/home/Home'
+import Home from "./containers/home/Home";
 
-const App = () => { 
-  return (<Home/>);
-}
+const App = () => {
+  return <Home />;
+};
 
 export default App;
