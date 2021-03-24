@@ -4,51 +4,39 @@ import FilterSearch from "../common/FilterSearch/FilterSearch";
 import BonusItem from "../common/BonusItem/BonusItem";
 import { Bonus } from "../../types/index";
 
-const data: Bonus[] = [
-  {
-    id: 1,
-    title: "Sitecostructor.io",
-    description: "Description",
-    promocode: "itpromocodes",
-    activated: false,
-  },
-  {
-    id: 2,
-    title: "Appvision.com",
-    description: "Description",
-    promocode: "itpromocodes",
-    activated: false,
-  },
-  {
-    id: 3,
-    title: "Analytics.com",
-    description: "Description",
-    promocode: "itpromocodes",
-    activated: false,
-  },
-  {
-    id: 4,
-    title: "Logotype",
-    description: "Description",
-    promocode: "itpromocodes",
-    activated: false,
-  },
-];
 
 const Main = () => {
   const [filteredText, setFilteredText] = useState("");
 
-  const [datas, setData] = useState(data);
+  const [datas, setData] = useState<Bonus[]|any[] | any>([]);
+  const [error, setError] = useState<any | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
-    setData(data);
+    fetchData();
+
   }, []);
+
+  const fetchData = () => {
+    fetch("https://605b9fe027f0050017c079b0.mockapi.io/api/v1/bonuses")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setLoading(true);
+          setData(result)
+        },
+        (error) => {
+          setError(error)
+          setLoading(false);
+        }
+      )
+  }
 
   // Filtering items every time change letter
 
   const onFilterHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFilteredText(e.target.value);
-    const updateData = datas.filter((singleData) =>
+    const updateData = datas && datas.length > 0 && datas.filter((singleData : Bonus) =>
       singleData.title.includes(e.target.value)
     );
     setData(updateData);
@@ -61,7 +49,7 @@ const Main = () => {
   ) => {
     e.preventDefault();
     setFilteredText("");
-    setData(data);
+    fetchData();
   };
 
   // changing active mode for a specific item
@@ -70,7 +58,7 @@ const Main = () => {
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
     selectedData: Bonus
   ) => {
-    const updatedLists = datas.map((data) =>
+    const updatedLists = datas.map((data : Bonus) =>
       data.id === selectedData.id
         ? { ...data, activated: !data.activated }
         : data
@@ -78,6 +66,11 @@ const Main = () => {
     setData(updatedLists);
   };
 
+  if (error) {
+    return <div>Error: {error?.message}</div>;
+  } else if (!loading) {
+    return <div>Loading...</div>;
+  } else {
   return (
     <div className={styles.bg}>
       <div className={styles.searchBar}>
@@ -93,7 +86,7 @@ const Main = () => {
       </div>
       {datas &&
         datas.length > 0 &&
-        datas.map((singleData, index) => {
+        datas.map((singleData: Bonus, index: number) => {
           return (
             <BonusItem
               data={singleData}
@@ -104,6 +97,7 @@ const Main = () => {
         })}
     </div>
   );
+      }
 };
 
 export default Main;
