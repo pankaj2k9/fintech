@@ -1,13 +1,13 @@
 @import "../../assets/styles/variables.scss";
 .bg {
-  padding: 20px 30px;
+  padding: 1.25rem 1.875rem;
   .searchBar {
     .heading {
       color: $primary-color;
-      line-height: 46px;
+      line-height: 2.875rem;
       font-weight: 100;
       font-family: "Rubik", sans-serif;
-      font-size: 39px;
+      font-size: 2.438rem;
     }
   }
 }

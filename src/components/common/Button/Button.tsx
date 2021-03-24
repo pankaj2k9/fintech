@@ -1,10 +1,14 @@
 import React from 'react'
+import styles from './Button.module.scss'
 
-const Button = () => {
+interface ButtonProps {
+    onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
+    submitText: string;
+}
+
+const Button: React.FC<ButtonProps> = ({onClick, submitText}) => {
     return (
-        <div>
-            Button
-        </div>
+        <button className={styles.btnstyle} onClick={(e) => onClick(e)}> {submitText}</button>
     )
 }
 

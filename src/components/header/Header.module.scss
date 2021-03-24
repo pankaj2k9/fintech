@@ -2,23 +2,23 @@
 
 .bg {
   background-color: #ffffff;
-  padding: 15px;
+  padding: 0.938rem;
   display: flex;
   .textWarpper {
-    margin-right: 20px;
+    margin-right: 1.25rem;
     .mainHeading {
-      font-size: 13px;
+      font-size: 0.813rem;
       font-weight: 400;
       color: $sub-heading-color;
-      line-height: 19px;
+      line-height: 1.188rem;
       margin: 0px;
       font-family: 'Roboto', sans-serif;
     }
     .subHeading {
-      font-size: 19px;
+      font-size: 1.188rem;
       font-weight: 400;
       color: $primary-color;
-      line-height: 25px;
+      line-height: 1.563rem;
       margin: 0px;
       font-family: 'Rubik', sans-serif;
     }

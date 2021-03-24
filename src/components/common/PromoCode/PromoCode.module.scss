@@ -1,0 +1,50 @@
+@import "../../../assets/styles/variables.scss";
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+.container {
+    .level {
+      font-size: 0.688rem;
+      font-weight: 400;
+      color: $sub-heading-color;
+      line-height: 1rem;
+      margin: 0px;
+      margin-bottom: 0.188rem;
+      font-family: 'Roboto', sans-serif;
+      text-transform: uppercase;
+
+    }
+    .warpper {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        .input{
+            border: 1px solid $sub-heading-color;
+            border-radius: 4px;
+            padding: 0rem 0.313rem 0rem 1rem;
+            font-size: 0.938rem;
+            line-height: 1.375rem;
+            color: $primary-color;
+            font-weight: 400;
+            font-family: 'Roboto', sans-serif;
+            width: 100%;
+            max-width: 18.75rem;
+            height: 3rem;
+            margin-right: 0.625rem;
+            &:focus{
+                border: 1px solid $secondary-color;
+            }
+        }
+
+        .icon { 
+            position: absolute;
+            top:0.938rem;
+            left: auto; 
+            right: 0rem;
+            padding-right: 0.625rem;
+            color: $secondary-color;
+            width: 0.938rem;
+            height: auto;
+          }
+    }
+   
+    
+}

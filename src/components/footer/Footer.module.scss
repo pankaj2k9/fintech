@@ -1,17 +1,17 @@
 @import "../../assets/styles/variables.scss";
 
 .bg {
- padding: 15px;
+ padding: 0.938rem;
  border-top: 1px solid #E9E9E9;
  display:flex;
  justify-content: flex-end;
- margin-left: 30px;
- margin-right: 30px;
+ margin-left: 1.875rem;
+ margin-right: 1.875rem;
  .txt{
-  font-size: 13px;
+  font-size: 0.813rem;
   font-weight: 400;
   color: $sub-heading-color;
-  line-height: 19px;
+  line-height: 1.188rem;
   margin: 0px;
   font-family: 'Roboto', sans-serif;
  }
