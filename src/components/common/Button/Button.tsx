@@ -9,7 +9,6 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ onClick, submitText }) => {
   return (
     <button className={styles.btnstyle} onClick={(e) => onClick(e)}>
-      {" "}
       {submitText}
     </button>
   );

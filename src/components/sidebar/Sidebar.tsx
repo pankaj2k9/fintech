@@ -17,7 +17,6 @@ const Sidebar = () => {
       <RadioButtonUnchecked className={styles.icon} />
       <RadioButtonUnchecked className={styles.icon} />
       <RadioButtonUnchecked className={styles.icon} />
-
       <RadioButtonUnchecked className={styles.icon} />
       <RadioButtonUnchecked className={styles.icon} />
       <RadioButtonUnchecked className={styles.icon} />

@@ -11,7 +11,9 @@ interface PromoCodeProps {
 const PromoCode: React.FC<PromoCodeProps> = ({ level, value, placeholder }) => {
   const [tempValue, setTempValue] = useState(value);
 
-  const onCopy = (copyValue: string) => {
+  // For copying promocode to clipboard
+
+  const onCopy = () => {
     const tempInput = document.createElement("input");
     tempInput.value = tempValue;
     document.body.appendChild(tempInput);
@@ -32,7 +34,7 @@ const PromoCode: React.FC<PromoCodeProps> = ({ level, value, placeholder }) => {
         />
         <img
           className={styles.icon}
-          onClick={() => onCopy(value)}
+          onClick={() => onCopy()}
           src={copyIcon}
           alt="#"
         />

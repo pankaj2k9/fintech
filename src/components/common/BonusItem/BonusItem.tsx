@@ -3,6 +3,7 @@ import styles from "./BonusItem.module.scss";
 import PromoCode from "../PromoCode/PromoCode";
 import { Bonus } from "../../../types/index";
 import Button from "../Button/Button";
+
 interface BonusItemProps {
   onChangeActivate: (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>,

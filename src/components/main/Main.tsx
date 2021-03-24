@@ -44,6 +44,8 @@ const Main = () => {
     setData(data);
   }, []);
 
+  // Filtering items every time change letter
+
   const onFilterHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFilteredText(e.target.value);
     const updateData = datas.filter((singleData) =>
@@ -52,6 +54,8 @@ const Main = () => {
     setData(updateData);
   };
 
+ // Reseting item lists
+ 
   const onResetHandler = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
@@ -59,6 +63,8 @@ const Main = () => {
     setFilteredText("");
     setData(data);
   };
+
+  // changing active mode for a specific item
 
   const onChangeActivate = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
