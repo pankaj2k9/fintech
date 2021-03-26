@@ -39,6 +39,9 @@ const Main = () => {
     const updateData = datas && datas.length > 0 && datas.filter((singleData : Bonus) =>
       singleData.title.includes(e.target.value)
     );
+    if(e.target.value === "") {
+      fetchData();
+    }
     setData(updateData);
   };
 
